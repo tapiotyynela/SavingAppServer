@@ -10,8 +10,8 @@ const getAllSavings = (req, res, next) => {
 }
 
 const newSaving = (req, res, next) => {
-    const { amount, adInfo, goalId } = req.body
-    pool.query(`INSERT INTO saving (amount, adInfo, created_at, goalid) values (${amount}, '${adInfo}', now(), ${goalId})`, (error, results) => {
+    const { amount, adinfo, goalid } = req.body
+    pool.query(`INSERT INTO saving (amount, adinfo, created_at, goalid) values (${amount}, '${adinfo}', now(), ${goalid})`, (error, results) => {
         if (error) {
             throw error
         }
